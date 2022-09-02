@@ -23,6 +23,9 @@ document.querySelector(".tombol").addEventListener('click', function () {
             showCancelButton: false,
             confirmButtonText: `Iya`,
             denyButtonText: `Gak`,
+            onOpen: function () {
+                $(".swal2-deny").attr('disabled', 'disabled');
+              }
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
